@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=43:2F:0B:FE:CF:23:A9:1C:BB:EC:D1:46:03:17:59:4D:7E:51:4F:D4%3Bcom.github.ronit.weather
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.github.ronit.weather
+
+    SHA-1 certificate fingerprint:
+    43:2F:0B:FE:CF:23:A9:1C:BB:EC:D1:46:03:17:59:4D:7E:51:4F:D4
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDss2fDwbXM1r99rYoX8TD58oEAVxrnWm8</string>
+</resources>
