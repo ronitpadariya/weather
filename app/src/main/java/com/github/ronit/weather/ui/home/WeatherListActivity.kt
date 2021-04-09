@@ -1,4 +1,4 @@
-package com.github.ronit.weather.ui
+package com.github.ronit.weather.ui.home
 
 import android.content.Intent
 import android.os.Bundle

@@ -31,10 +31,10 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".AddLocationActivity"
+            android:name=".ui.AddCityActivity"
             android:label="@string/title_activity_add_location"></activity>
         <activity
-            android:name=".ui.WeatherListActivity"
+            android:name=".ui.home.WeatherListActivity"
             android:label="@string/title_weather_list"
             android:theme="@style/Theme.OpenWeather.NoActionBar">
             <intent-filter>
@@ -44,13 +44,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.WeatherDetailActivity"
+            android:name=".ui.home.WeatherDetailActivity"
             android:label="@string/title_weather_detail"
-            android:parentActivityName=".ui.WeatherListActivity"
+            android:parentActivityName=".ui.home.WeatherListActivity"
             android:theme="@style/Theme.OpenWeather.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.github.ronit.weather.ui.WeatherListActivity" />
+                android:value="com.github.ronit.weather.ui.home.WeatherListActivity" />
         </activity>
     </application>
 

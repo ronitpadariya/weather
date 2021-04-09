@@ -1,4 +1,4 @@
-package com.github.ronit.weather.ui
+package com.github.ronit.weather.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

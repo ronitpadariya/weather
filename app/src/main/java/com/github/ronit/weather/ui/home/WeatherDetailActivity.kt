@@ -1,4 +1,4 @@
-package com.github.ronit.weather.ui
+package com.github.ronit.weather.ui.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -43,7 +43,8 @@ class WeatherDetailActivity : AppCompatActivity() {
             // using a fragment transaction.
             val fragment = WeatherDetailFragment().apply {
                 arguments = Bundle().apply {
-                    putString(WeatherDetailFragment.ARG_ITEM_ID,
+                    putString(
+                        WeatherDetailFragment.ARG_ITEM_ID,
                             intent.getStringExtra(WeatherDetailFragment.ARG_ITEM_ID))
                 }
             }

@@ -2,5 +2,5 @@
     <string name="app_name">OpenWeather</string>
     <string name="title_weather_list">Items</string>
     <string name="title_weather_detail">Weather Detail</string>
-    <string name="title_activity_add_location">Map</string>
+    <string name="title_activity_add_location">Add City</string>
 </resources>
