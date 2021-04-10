@@ -14,6 +14,11 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.AddCity" parent="Theme.MaterialComponents.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
     <style name="Theme.OpenWeather.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -22,4 +27,6 @@
     <style name="Theme.OpenWeather.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.OpenWeather.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
+

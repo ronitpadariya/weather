@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.ronit.weather">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -31,26 +30,13 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".ui.AddCityActivity"
-            android:label="@string/title_activity_add_location"></activity>
-        <activity
-            android:name=".ui.home.WeatherListActivity"
-            android:label="@string/title_weather_list"
-            android:theme="@style/Theme.OpenWeather.NoActionBar">
+            android:name=".ui.addcity.AddCityActivity"
+            android:label="@string/title_activity_add_location">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.home.WeatherDetailActivity"
-            android:label="@string/title_weather_detail"
-            android:parentActivityName=".ui.home.WeatherListActivity"
-            android:theme="@style/Theme.OpenWeather.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.github.ronit.weather.ui.home.WeatherListActivity" />
         </activity>
     </application>
 
