@@ -61,6 +61,15 @@ dependencies {
     // lifecycleScope
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
 
+    //Logging
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    // Permissions
+    implementation "com.karumi:dexter:6.2.2"
+
+    //location
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
     // retrofit2
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
@@ -68,10 +77,6 @@ dependencies {
 
     // moshi
     implementation 'com.squareup.moshi:moshi-kotlin:1.10.0'
-
-    // coroutines
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3'
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
 
     // dagger hilt
     implementation 'com.google.dagger:hilt-android:2.33-beta'

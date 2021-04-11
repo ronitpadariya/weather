@@ -1,73 +1,123 @@
-package com.mobiquity.ronit
+package com.github.ronit.weather.data
 import com.squareup.moshi.Json
 
+data class Forecast(
+    @Json(name = "cod")
+    var cod: String? = "",
+    @Json(name = "message")
+    var message: String? = "",
+    @Json(name = "cnt")
+    var cnt: Int = 0,
+    @Json(name = "city")
+    var coord: City? = null,
+    @Json(name = "list")
+    var weather: List<Report>? = null,
+)
+
+data class City(
+    @Json(name = "id")
+    var id: Int = 0,
+    @Json(name = "name")
+    var name: String? = "",
+    @Json(name = "country")
+    var country: String? = "",
+    @Json(name = "population")
+    var population: Int = 0,
+    @Json(name = "timezone")
+    var timezone: Int = 0,
+    @Json(name = "sunsrise")
+    var sunrise: Long? = 0,
+    @Json(name = "sunset")
+    var sunset: Long,
+    @Json(name = "coord")
+    var coord: Coord? = null
+)
 
 data class Report(
+    @Json(name = "base")
+    var base: String? = null,
     @Json(name = "clouds")
-    val clouds: Clouds,
+    var clouds: Clouds? = null,
+    @Json(name = "cod")
+    var cod: Int? = null,
+    @Json(name = "coord")
+    var coord: Coord? = null,
     @Json(name = "dt")
-    val dt: Int,
-    @Json(name = "dt_txt")
-    val dtTxt: String,
+    var dt: Long? = null,
+    @Json(name = "id")
+    var id: Long? = null,
     @Json(name = "main")
-    val main: Main,
-    @Json(name = "pop")
-    val pop: Int,
+    var main: Main? = null,
+    @Json(name = "name")
+    var name: String? = null,
     @Json(name = "sys")
-    val sys: Sys,
+    var sys: Sys? = null,
+    @Json(name = "timezone")
+    var timezone: Int? = null,
     @Json(name = "visibility")
-    val visibility: Int,
+    var visibility: Int? = null,
     @Json(name = "weather")
-    val weather: List<Weather>,
+    var weather: List<Weather>? = null,
     @Json(name = "wind")
-    val wind: Wind
+    var wind: Wind? = null
 )
 
 data class Clouds(
     @Json(name = "all")
-    val all: Int
+    var all: Int? = null
+)
+
+data class Coord(
+    @Json(name = "lat")
+    var lat: Double? = null,
+    @Json(name = "lon")
+    var lon: Double? = null
 )
 
 data class Main(
     @Json(name = "feels_like")
-    val feelsLike: Double,
+    var feelsLike: Double? = null,
     @Json(name = "grnd_level")
-    val grndLevel: Int,
+    var grndLevel: Int? = null,
     @Json(name = "humidity")
-    val humidity: Int,
+    var humidity: Int? = null,
     @Json(name = "pressure")
-    val pressure: Int,
+    var pressure: Int? = null,
     @Json(name = "sea_level")
-    val seaLevel: Int,
+    var seaLevel: Int? = null,
     @Json(name = "temp")
-    val temp: Double,
-    @Json(name = "temp_kf")
-    val tempKf: Double,
+    var temp: Double? = null,
     @Json(name = "temp_max")
-    val tempMax: Double,
+    var tempMax: Double? = null,
     @Json(name = "temp_min")
-    val tempMin: Double
+    var tempMin: Double? = null
 )
 
 data class Sys(
-    @Json(name = "pod")
-    val pod: String
+    @Json(name = "country")
+    var country: String? = null,
+    @Json(name = "sunrise")
+    var sunrise: Long? = null,
+    @Json(name = "sunset")
+    var sunset: Long? = null
 )
 
 data class Weather(
     @Json(name = "description")
-    val description: String,
+    var description: String? = null,
     @Json(name = "icon")
-    val icon: String,
+    var icon: String? = null,
     @Json(name = "id")
-    val id: Int,
+    var id: Int? = null,
     @Json(name = "main")
-    val main: String
+    var main: String? = null
 )
 
 data class Wind(
     @Json(name = "deg")
-    val deg: Int,
+    var deg: Int? = null,
+    @Json(name = "gust")
+    var gust: Double? = null,
     @Json(name = "speed")
-    val speed: Double
+    var speed: Double? = null
 )
