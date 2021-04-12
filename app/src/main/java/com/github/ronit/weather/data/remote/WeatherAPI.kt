@@ -10,10 +10,10 @@ import retrofit2.http.Query
 interface WeatherAPI {
 
     @GET("/data/2.5/weather")
-    fun currentWeatherData(@Query("q") city: String, @Query("appid") apiKey: String): Report
+    suspend fun currentWeatherData(@Query("q") city: String, @Query("appid") apiKey: String): Report
 
     @GET("/data/2.5/forecast")
-    fun fiveDayForecastData(@Query("q") city: String, @Query("appid") apiKey: String): Forecast
+    suspend fun fiveDayForecastData(@Query("q") city: String, @Query("appid") apiKey: String): Forecast
 
     companion object {
         operator fun invoke(retrofit: Retrofit) = retrofit.create<WeatherAPI>()

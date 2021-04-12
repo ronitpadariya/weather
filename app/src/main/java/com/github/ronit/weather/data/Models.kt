@@ -7,28 +7,28 @@ data class Forecast(
     @Json(name = "message")
     var message: String? = "",
     @Json(name = "cnt")
-    var cnt: Int = 0,
+    var cnt: Int? = 0,
     @Json(name = "city")
-    var coord: City? = null,
+    var city: City? = null,
     @Json(name = "list")
     var weather: List<Report>? = null,
 )
 
 data class City(
     @Json(name = "id")
-    var id: Int = 0,
+    var id: Int? = 0,
     @Json(name = "name")
     var name: String? = "",
     @Json(name = "country")
     var country: String? = "",
     @Json(name = "population")
-    var population: Int = 0,
+    var population: Int? = 0,
     @Json(name = "timezone")
-    var timezone: Int = 0,
+    var timezone: Int? = 0,
     @Json(name = "sunsrise")
     var sunrise: Long? = 0,
     @Json(name = "sunset")
-    var sunset: Long,
+    var sunset: Long? = 0,
     @Json(name = "coord")
     var coord: Coord? = null
 )

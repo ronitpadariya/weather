@@ -9,4 +9,8 @@
     <string name="title_report_list">Reports</string>
     <string name="title_report_detail">Report Detail</string>
     <string name="city_found">%1$s city found</string>
+
+    <string name="current_label">Current</string>
+    <string name="humidity_label">Humidity</string>
+    <string name="wind_label">Wind</string>
 </resources>

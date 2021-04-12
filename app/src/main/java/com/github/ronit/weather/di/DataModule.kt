@@ -20,9 +20,9 @@ import javax.inject.Qualifier
 annotation class BaseUrl
 
 
-@Qualifier
+/*@Qualifier
 @Retention(AnnotationRetention.BINARY)
-annotation class APIKey
+annotation class APIKey*/
 
 
 @Module
@@ -71,8 +71,8 @@ class DataModule {
     fun provideBaseUrl(): String = "http://api.openweathermap.org"
 
 
-    @Provides
+    /*@Provides
     @APIKey
-    fun provideAPIKey(): String = "fae7190d7e6433ec3a45285ffcf55c86"
+    fun provideAPIKey(): String = "fae7190d7e6433ec3a45285ffcf55c86"*/
 
 }

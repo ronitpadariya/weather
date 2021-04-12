@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class WeatherInfoActivity : AppCompatActivity(){
@@ -29,23 +30,39 @@ class WeatherInfoActivity : AppCompatActivity(){
 
         val city = intent.getStringExtra(KEY_CITY)
 
-        city?.let { weatherInfoVM.getForecastInfo(it) }
+        city?.let {
+            weatherInfoVM.getCurrentWeatherInfo(it)
+            weatherInfoVM.getForecastInfo(it)
+        }
 
         weatherInfoVM.forecastLiveData.observe(this, {
             if(it.isSuccess){
 
             } else {
-                MaterialAlertDialogBuilder(this)
-                .setTitle(it.error)
-                .setPositiveButton(
-                    android.R.string.ok
-                ) { dialog, _ ->
-                    dialog?.dismiss()
-                    finish()
-                }
-                .show()
+                it.error?.let { it1 -> showErrorDialog(it1) }
             }
         })
+
+        weatherInfoVM.currentLiveData.observe(this, {
+            if(it.isSuccess){
+
+            } else {
+                it.error?.let { it1 -> showErrorDialog(it1) }
+            }
+        })
+    }
+
+    private fun showErrorDialog(error: String){
+        Timber.d("==================Error $error")
+        MaterialAlertDialogBuilder(this)
+            .setTitle(error)
+            .setPositiveButton(
+                android.R.string.ok
+            ) { dialog, _ ->
+                dialog?.dismiss()
+                finish()
+            }
+            .show()
     }
 
 }
