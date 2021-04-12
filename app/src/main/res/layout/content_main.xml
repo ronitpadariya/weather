@@ -12,15 +12,6 @@
         android:descendantFocusability="blocksDescendants"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/current_label"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:textColor="?attr/colorPrimary"
-            android:textStyle="bold" />
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/todayMaterialCard"
             android:clickable="true"
@@ -39,12 +30,22 @@
                 android:orientation="vertical"
                 android:paddingTop="@dimen/spacing_medium">
 
-                <TextSwitcher
-                    android:id="@+id/temp_text_view"
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/current_label"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextSwitcher
+                    android:id="@+id/temp_text_view"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="@dimen/padding_normal"
                     android:layoutDirection="ltr"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center_horizontal" />
 
                 <TextSwitcher
                     android:id="@+id/description_text_view"
@@ -56,6 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginEnd="@dimen/spacing_large"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -115,15 +117,6 @@
                                 android:layout_gravity="center" />
                         </LinearLayout>
                     </LinearLayout>
-
-
-                    <!--<com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/animation_view"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true" />-->
 
                 </LinearLayout>
             </LinearLayout>
