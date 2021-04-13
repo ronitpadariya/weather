@@ -11,7 +11,7 @@ data class Forecast(
     @Json(name = "city")
     var city: City? = null,
     @Json(name = "list")
-    var weather: List<Report>? = null,
+    var list: List<Report>? = null,
 )
 
 data class City(
@@ -44,8 +44,6 @@ data class Report(
     var coord: Coord? = null,
     @Json(name = "dt")
     var dt: Long? = null,
-    @Json(name = "id")
-    var id: Long? = null,
     @Json(name = "main")
     var main: Main? = null,
     @Json(name = "name")
@@ -86,7 +84,7 @@ data class Main(
     @Json(name = "sea_level")
     var seaLevel: Int? = null,
     @Json(name = "temp")
-    var temp: Double? = null,
+    var temp: Double? = 0.00,
     @Json(name = "temp_max")
     var tempMax: Double? = null,
     @Json(name = "temp_min")

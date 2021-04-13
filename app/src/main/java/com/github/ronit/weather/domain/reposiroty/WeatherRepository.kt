@@ -8,6 +8,6 @@ interface WeatherRepository {
 
     fun currentWeatherData(city: String, apiKey: String): Flow<Report>
 
-    fun fiveDayForecastData(city: String, apiKey: String): Flow<Forecast>
+    fun fiveDayForecastData(city: String, apiKey: String, units: String): Flow<Forecast>
 
 }

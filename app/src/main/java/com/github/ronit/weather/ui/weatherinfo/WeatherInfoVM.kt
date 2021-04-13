@@ -24,7 +24,7 @@ class WeatherInfoVM @Inject constructor(private val weatherUseCase: WeatherUseCa
 
     fun getForecastInfo(city: String){
         viewModelScope.launch {
-            weatherUseCase.fiveDayForecastData(city, Constant.API_KEY)
+            weatherUseCase.fiveDayForecastData(city, Constant.API_KEY, Constant.UNITS)
                 .catch { e ->
                     mForecastLiveData.postValue(ForecastViewIntent(null, e.message, false))
                 }

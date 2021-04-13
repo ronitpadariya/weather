@@ -13,5 +13,5 @@ class WeatherRepositoryImpl @Inject constructor(private val weatherAPI: WeatherA
 
     override fun currentWeatherData(city: String, apiKey: String) = flow { emit(weatherAPI.currentWeatherData(city, apiKey)) }
 
-    override fun fiveDayForecastData(city: String, apiKey: String) = flow { emit(weatherAPI.fiveDayForecastData(city, apiKey)) }
+    override fun fiveDayForecastData(city: String, apiKey: String, units: String) = flow { emit(weatherAPI.fiveDayForecastData(city, apiKey, units)) }
 }

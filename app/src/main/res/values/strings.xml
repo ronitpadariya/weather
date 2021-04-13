@@ -13,4 +13,6 @@
     <string name="current_label">Current</string>
     <string name="humidity_label">Humidity</string>
     <string name="wind_label">Wind</string>
+    <string name="next_5_days">Next 5 Days</string>
+    <string name="wind_unit_label">%.0f km/hr</string>
 </resources>

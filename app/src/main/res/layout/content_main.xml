@@ -41,11 +41,10 @@
 
                 <TextSwitcher
                     android:id="@+id/temp_text_view"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="@dimen/padding_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
-                    android:layout_gravity="center_horizontal" />
+                    android:layout_gravity="center" />
 
                 <TextSwitcher
                     android:id="@+id/description_text_view"
@@ -121,6 +120,22 @@
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginStart="@dimen/spacing_mlarge"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="@string/next_5_days"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_mlarge"
+            android:orientation="horizontal" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

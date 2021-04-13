@@ -8,6 +8,6 @@ class WeatherUseCase @Inject constructor(private val weatherRepository: WeatherR
 
     fun currentWeatherData(city: String, apiKey: String) = weatherRepository.currentWeatherData(city, apiKey)
 
-    fun fiveDayForecastData(city: String, apiKey: String) = weatherRepository.fiveDayForecastData(city, apiKey)
+    fun fiveDayForecastData(city: String, apiKey: String, units: String) = weatherRepository.fiveDayForecastData(city, apiKey, units)
 
 }

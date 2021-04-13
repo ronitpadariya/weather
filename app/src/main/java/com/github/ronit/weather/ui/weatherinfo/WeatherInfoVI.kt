@@ -14,3 +14,13 @@ data class CurrentViewIntent(
     val error: String?,
     val isSuccess: Boolean
 )
+
+data class FiveDayWeather(
+    val dt: Long,
+    val temp: Double,
+    val minTemp: Double,
+    val maxTemp: Double,
+    val weatherID: Int,
+    val timestampStart: Long,
+    val timestampEnd: Long
+)
